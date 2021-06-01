@@ -1,0 +1,11 @@
+﻿@model CourseApplication.Models.Customer
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Membership: @Model.MembershipType.Name</h2>
+@if (Model.Birthdate.HasValue)
+{
+    <h2>Birthdate: @Model.Birthdate.Value.ToShortDateString()</h2>
+}
